@@ -1,0 +1,63 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon";
+
+const features = [
+  {
+    title: "Bring your own frame",
+    description:
+      "Cree su sitio utilizando React, Svelte, Vue, Preact, componentes web o simplemente HTML + JavaScript.",
+    icon: "bx:bxs-briefcase",
+  },
+  {
+    title: "100% Static HTML, No JS",
+    description:
+      "Astro procesa toda tu página en HTML estático, eliminando todo JavaScript de tu compilación final de forma predeterminada.",
+    icon: "bx:bxs-window-alt",
+  },
+  {
+    title: "On-Demand Components",
+    description:
+      "¿Necesitas algo de JS? Astro puede hidratar automáticamente los componentes interactivos cuando se vuelven visibles en la página.  ",
+    icon: "bx:bxs-data",
+  },
+  {
+    title: "Broad Integration",
+    description:
+      "Astro admite TypeScript, Scoped CSS, módulos CSS, Sass, Tailwind, Markdown, MDX y cualquier otro paquete npm.",
+    icon: "bx:bxs-bot",
+  },
+  {
+    title: "SEO Enabled",
+    description:
+      "Los mapas de sitio automáticos, las fuentes RSS, la paginación y las colecciones eliminan las complicaciones del SEO y la distribución. ¡Simplemente funciona!",
+    icon: "bx:bxs-file-find",
+  }
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    Todo lo que necesitas para iniciar un sitio web
+  </h2>
+  <p class="text-lg mt-4 text-slate-600">
+    Astro viene con pilas incluidas. Se necesitan las mejores partes de la última tecnología.
+    herramientas y añade sus propias innovaciones.
+  </p>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+  {
+    features.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
