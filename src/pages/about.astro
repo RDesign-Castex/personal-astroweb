@@ -19,12 +19,36 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
       <Fragment slot="desc">Somos un pequeño equipo apasionado.</Fragment>
     </Sectionhead>
 
-    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16 ">
-      <h2 class=" font-bold  text-3xl  text-gray-800">
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+      <h2 class="font-bold text-3xl text-gray-800">
         Empoderemos el mundo programando
       </h2>
-      <p class="text-lg  leading-relaxed text-bold border-t-4 border-gray-400 my-1">
-        ¡Hola! Soy [René Kuhm], el corazón y la mente detrás de este proyecto. Permíteme compartir un poco sobre quién soy y mi pasión por lo que hago. Soy un apasionado [de la informática recibido en ingeniero electrónico, además cuento con 3 títulos de programación] con años de experiencia en el mundo de [la tecnología y la programación]. Mi viaje comenzó con una curiosidad insaciable por [la tecnología en general], y desde entonces he estado comprometido en aprender y crecer en este emocionante campo. Mi enfoque principal es [orientado a la programación en general], donde he tenido el privilegio de [destacar algún logro, proyecto o experiencia relevante]. A través de este viaje, he perfeccionado mis habilidades en [desarrollo web, javascript, react, diseño gráfico, marketing digital, etc.]. Lo que más disfruto de mi trabajo es [programar a diario]. Creo firmemente en la importancia de [mi trabajo], y mi objetivo es [que el cliente quede satisfecho con mi trabajo]. Aunque soy un individuo en este viaje, no estoy solo. He tenido el honor de colaborar con personas talentosas y apasionadas en proyectos emocionantes. Mi página "Acerca de" es un espacio para conectarme contigo, compartir mi experiencia y conocerte a ti, mi valioso visitante. Juntos, podemos [crear una increíble relación en donde se enfoque tus ideas de comercio o sitio personal]. Te invito a explorar mi trabajo y conocer más sobre lo que hago. Si tienes alguna pregunta o deseas colaborar en un proyecto, no dudes en ponerte en contacto conmigo. ¡Es un placer conocerte y compartir este viaje contigo!
+      <p
+        class="text-lg leading-relaxed text-bold border-t-4 border-gray-400 my-1">
+        ¡Hola! Mi nombre es René Kuhm, y soy la esencia detrás de este proyecto.
+        Me gustaría darte una visión más profunda sobre mí y mi ferviente pasión
+        por la tecnología y la programación. Soy <strong>Programador</strong> con
+        una especial inclinación hacia la informática. A lo largo de los años, no
+        solo he obtenido un título en electrónica, sino que también he conseguido
+        tres certificaciones en programación. Mi travesía en este mundo tecnológico
+        comenzó con una simple chispa de curiosidad que, con el tiempo, se transformó
+        en una llama ardiente de aprendizaje y crecimiento. Aunque tengo competencias
+        en diversas áreas como desarrollo web, javascript, react, diseño gráfico
+        y marketing digital, lo que realmente me llena de alegría es programar cada
+        día. Cada línea de código es un reflejo de mi dedicación y deseo de crear
+        soluciones innovadoras. Una de mis experiencias más memorables fue [crear
+        un proyecto en nextjs que me abrio la invitacion por parte de la empresa
+        a un seminario] .A través de estos proyectos, he fortificado mis habilidades
+        y conocimientos, y he tenido el honor de colaborar con individuos talentosos
+        que comparten mi pasión. Creo con firmeza en el impacto positivo de mi trabajo
+        y aspiro a que cada cliente quede plenamente satisfecho con los resultados.
+        Y aunque esta pueda parecer una travesía individual, he contado con el apoyo
+        y colaboración de muchos compañeros de viaje. Te invito a conectarte conmigo
+        a través de esta página, explorar mi portafolio y conocer más sobre mis habilidades
+        y experiencia. Si estás interesado en colaborar o simplemente tienes una
+        pregunta, estaré encantado de escucharte. Gracias por tomarte el tiempo de
+        conocerme. ¡Espero que podamos embarcarnos juntos en un emocionante viaje
+        tecnológico!
       </p>
     </div>
     <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-3xl mt-12">
@@ -43,7 +67,7 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
                 position="center"
                 class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl"
               />
-    
+
               <div class="mt-4 text-center">
                 <h2 class="text-lg text-gray-800">
                   {teamMemberEntry.data.name}
@@ -57,7 +81,6 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         ))
       }
     </div>
-    
   </Container>
   <Watsapp />
 </Layout>
