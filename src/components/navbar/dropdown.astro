@@ -1,10 +1,11 @@
 ---
-import { Dropdown, DropdownItems } from "astro-navbar";
+import { Dropdown as AstroDropdown, DropdownItems } from "astro-navbar";
+
 const { title, lastItem, children } = Astro.props;
 ---
 
 <li class="relative">
-  <Dropdown class="group">
+  <AstroDropdown class="group">
     <button
       class="flex items-center gap-1 w-full lg:w-auto lg:px-3 py-2 text-gray-600 hover:text-gray-900">
       <span>{title}</span>
@@ -14,7 +15,7 @@ const { title, lastItem, children } = Astro.props;
         viewBox="0 0 24 24"
         stroke-width="3"
         stroke="currentColor"
-        class="w-3 h-3 mt-0.5 group-open:rotate-180">
+        class="w-3 h-3 mt-0.5 transform group-open:rotate-180">
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
@@ -23,12 +24,7 @@ const { title, lastItem, children } = Astro.props;
     </button>
     <DropdownItems>
       <div
-        class:list={[
-          "lg:absolute w-full lg:w-48 z-10",
-          lastItem
-            ? "lg:right-0 origin-top-right"
-            : "lg:left-0 origin-top-left",
-        ]}>
+        class={`lg:absolute w-full lg:w-48 z-10 ${lastItem ? "lg:right-0 origin-top-right" : "lg:left-0 origin-top-left"}`}>
         <div
           class="px-3 lg:py-2 lg:bg-white lg:rounded-md lg:shadow lg:border flex flex-col">
           {
@@ -43,5 +39,5 @@ const { title, lastItem, children } = Astro.props;
         </div>
       </div>
     </DropdownItems>
-  </Dropdown>
+  </AstroDropdown>
 </li>

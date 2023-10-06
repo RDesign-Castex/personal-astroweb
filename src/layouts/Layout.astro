@@ -22,7 +22,7 @@ const makeTitle = title ? title + " | " + "TecnoDespegue" : "TecnoDespegue";
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="dark" data-theme="dark">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -32,13 +32,13 @@ const makeTitle = title ? title + " | " + "TecnoDespegue" : "TecnoDespegue";
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
     <link
-      rel="stylesheet"
-      href="https://unpkg.com/@astrouxds/astro-web-components@6.12.1/dist/astro-web-components/astro-web-components.css"
-    />
+    rel="stylesheet"
+    href="/src/styles/dark.css"
+  />
     <script
       type="module"
       defer
-      src="https://unpkg.com/@astrouxds/astro-web-components@6.12.1/dist/astro-web-components/astro-web-components.esm.js"
+      src="/src/utils/dark.js"
     ></script>
     <SEO
       title={makeTitle}
@@ -62,19 +62,8 @@ const makeTitle = title ? title + " | " + "TecnoDespegue" : "TecnoDespegue";
       }}
     />
   </head>
-  <body class="dark-theme">
-    <div class= "flex-grid flex-auto">
-      <Navbar />
-      <rux-switch slot="right-side" id="theme-switch" class="mr-4 ">
-        <rux-icon
-            id="theme-icon"
-            slot="label"
-            icon="brightness-3"
-            size="small"
-        ></rux-icon>
-    </rux-switch>
-    </div>
-    </rux-global-status-bar>
+  <body>
+    <Navbar />
     <slot />
     <Footer />
     <style is:global>
