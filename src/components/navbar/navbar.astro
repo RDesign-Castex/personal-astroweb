@@ -29,7 +29,8 @@ const menuitems = [
 ---
 
 <Container>
-  <header class="flex flex-col lg:flex-row items-center justify-between w-full py-5">
+  <header
+    class="flex flex-col lg:flex-row items-center justify-between w-full py-5">
     <div class="flex items-center justify-between w-full lg:w-auto">
       <a href="/" class="text-lg flex items-center">
         <span class="font-bold text-slate-800">Tecno</span>
@@ -67,21 +68,31 @@ const menuitems = [
           }
         </ul>
       </MenuItems>
-      <div class="lg:hidden flex items-center mt-4">
-        <Link href="#" style="muted" block size="md">Log in</Link>
-        <Link href="../SignupForm.astro" size="md" block>Sign up</Link>
+      <div class="mt-4 lg:mt-0">
+        <rux-switch slot="right-side" id="theme-switch">
+          <rux-icon
+            id="theme-icon"
+            slot="label"
+            icon="brightness-3"
+            size="small"></rux-icon>
+        </rux-switch>
       </div>
+      <button class="theme-toggle-btn" id="theme-toggle-btn">
+        <svg
+          class="theme-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path
+            id="theme-icon-path"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707-.707M16 16s-1.5-2-4-2-4 2-4 2"
+          ></path>
+        </svg>
+      </button>
     </Astronav>
-
-    <div class="mt-4 lg:mt-0">
-      <rux-switch slot="right-side" id="theme-switch">
-        <rux-icon id="theme-icon" slot="label" icon="brightness-3" size="small"></rux-icon>
-      </rux-switch>
-    </div>
-    <button class="theme-toggle-btn" id="theme-toggle-btn">
-      <svg class="theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path id="theme-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707-.707M16 16s-1.5-2-4-2-4 2-4 2"></path>
-      </svg>
-  </button>
   </header>
 </Container>
