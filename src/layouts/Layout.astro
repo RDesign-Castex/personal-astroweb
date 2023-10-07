@@ -3,8 +3,10 @@ import { SEO } from "astro-seo";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
+
 export interface Props {
   title: string;
+  scripts?: Array<{ type?: string; nomodule?: boolean; src: string }>;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
@@ -14,7 +16,7 @@ const resolvedImageWithDomain = new URL(
   Astro.site
 ).toString();
 
-const { title } = Astro.props;
+const { title, scripts = [] } = Astro.props;
 
 const makeTitle = title ? title + " | " + "TecnoDespegue" : "TecnoDespegue";
 ---
@@ -24,16 +26,20 @@ const makeTitle = title ? title + " | " + "TecnoDespegue" : "TecnoDespegue";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <!-- Favicon y iconos relacionados -->
-    <!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/png" href="/favicon.png" />-->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="generator" content={Astro.generator} />
-
-    <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+    <link
+    rel="stylesheet"
+    href="/src/styles/dark.css"
+  />
+    <script
+      type="module"
+      defer
+      src="/src/utils/dark.js"
+    ></script>
     <SEO
       title={makeTitle}
       description="Astroship is a starter website template for Astro built with TailwindCSS."
@@ -61,11 +67,42 @@ const makeTitle = title ? title + " | " + "TecnoDespegue" : "TecnoDespegue";
     <slot />
     <Footer />
     <style is:global>
-      /* Improve Page speed */
-      /* https://css-tricks.com/almanac/properties/c/content-visibility/ */
       img {
         content-visibility: auto;
       }
     </style>
+    <script defer>
+      // ... (tu código JS aquí)
+      const body = document.querySelector('body');
+    const themeSwitch = document.getElementById('theme-switch');
+    const themeIcon = document.getElementById('theme-icon');
+    const darkIcon = 'brightness-3';
+    const darkTheme = 'dark-theme';
+    const lightIcon = 'wb-sunny';
+    const lightTheme = 'light-theme';
+    const themeName = 'astro-theme';
+    const themePreference = window.localStorage.getItem(themeName);
+
+    if (themePreference) {
+      const preference = JSON.parse(themePreference);
+      body.className = preference.class;
+      themeIcon.icon = preference.icon;
+      themeSwitch.checked = preference.icon === lightIcon;
+    }
+
+    themeSwitch.addEventListener('click', (e) => {
+      if (!e.target.checked) {
+        const preference = { class: lightTheme, icon: lightIcon };
+        window.localStorage.setItem(themeName, JSON.stringify(preference));
+        body.className = lightTheme;
+        themeIcon.icon = lightIcon;
+        return;
+      }
+      const preference = { class: darkTheme, icon: darkIcon };
+      window.localStorage.setItem(themeName, JSON.stringify(preference));
+      body.className = darkTheme;
+      themeIcon.icon = darkIcon;
+    });
+    </script>
   </body>
 </html>
