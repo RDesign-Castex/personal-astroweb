@@ -98,11 +98,11 @@ body.dark-theme {
 }
 
 body.dark-theme a {
-    color: #bb86fc;
+    color: #ffffff;
 }
 
 body.dark-theme a:hover {
-    color: #3700b3;
+    color: #00a7b3;
 }
 
 /* Estilos adicionales para mejorar la legibilidad en el tema oscuro */
@@ -143,6 +143,6 @@ body.dark-theme input::placeholder, body.dark-theme textarea::placeholder {
 }
 
 body.dark-theme input:focus, body.dark-theme textarea:focus, body.dark-theme select:focus, body.dark-theme button:focus {
-    border-color: #bb86fc;
+    border-color: #a877e4;
     box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.5);
 }
