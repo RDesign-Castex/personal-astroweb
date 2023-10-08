@@ -1,0 +1,174 @@
+<!--<div
+  class="flex h-7 w-14 rounded-full bg-gray-100 dark:bg-gray-900 cursor-pointer"
+  id="themeToggle">
+  <span class="sr-only"
+    >現在のモード：<span id="darkmode-state">ライトモード</span></span
+  >
+  <div class="flex justify-between items-center w-full">
+    <div class="flex justify-center items-center h-6 w-6">
+      <div
+        id="handle-darkmode-off"
+        class="flex justify-center items-center h-6 w-6 rounded-full bg-yellow-300 text-gray-900 dark:bg-transparent dark:text-gray-200">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+          ></path>
+        </svg>
+        <span class="sr-only">ライトモードに切り替える</span>
+      </div>
+    </div>
+    <div class="flex justify-center items-center h-6 w-6">
+      <div
+        id="handle-darkmode-on"
+        class="flex justify-center items-center h-6 w-6 rounded-full bg-transparent text-gray-900 dark:bg-white text dark:text-gray-900">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+          ></path>
+        </svg>
+        <span class="sr-only">ダークモードに切り替える</span>
+      </div>
+    </div>
+  </div>
+</div>-->
+<label for="theme-switch" class="cursor-pointer">
+  <input type="checkbox" id="theme-switch" class="hidden">
+  <span id="theme-icon" class="icon-placeholder"></span>
+</label>
+<style is:global>
+  .icon-placeholder:before {
+    content: '🌞'; /* Icono por defecto (sol) */
+    font-size: 24px;
+  }
+  body.dark-theme .icon-placeholder:before {
+    content: '🌙'; /* Icono para el tema oscuro (luna) */
+  }
+</style>
+
+<!--<script defer>
+  const body = document.querySelector('body');
+  const themeSwitch = document.getElementById('theme-switch');
+  const themeIcon = document.querySelector('.icon-placeholder');
+  const darkTheme = 'dark-theme';
+  const lightTheme = '';
+  const themeName = 'astro-theme';
+  const themePreference = window.localStorage.getItem(themeName);
+
+  if (themePreference) {
+    const preference = JSON.parse(themePreference);
+    body.className = preference.class;
+    themeIcon.textContent = preference.icon;
+    themeSwitch.checked = preference.class === darkTheme;
+  }
+
+  themeSwitch.addEventListener('change', (e) => {
+    if (e.target.checked) {
+      body.className = darkTheme;
+      themeIcon.textContent = '🌙';
+      window.localStorage.setItem(themeName, JSON.stringify({ class: darkTheme, icon: '🌙' }));
+    } else {
+      body.className = lightTheme;
+      themeIcon.textContent = '🌞';
+      window.localStorage.setItem(themeName, JSON.stringify({ class: lightTheme, icon: '🌞' }));
+    }
+  });
+</script>
+Estilos CSS Globales:
+Asegúrate de tener estilos CSS globales para los temas claro y oscuro. Por ejemplo:
+css
+Copy code
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+Con estos cambios, deberías tener un interruptor de tema funcional que cambie entre los temas claro y oscuro y guarde la preferencia del usuario en localStorage.
+
+
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const themeToggle = document.getElementById("themeToggle");
+    const state = document.getElementById("darkmode-state");
+    const stateLightText = "ライトモード";
+    const stateDarkText = "ダークモード";
+
+    function updateTheme() {
+      if (document.documentElement.classList.contains("dark")) {
+        state.textContent = stateDarkText;
+      } else {
+        state.textContent = stateLightText;
+      }
+    }
+
+    themeToggle.addEventListener("click", function () {
+      if (document.documentElement.classList.contains("dark")) {
+        localStorage.setItem("prefers_color_scheme_set", "light");
+        document.documentElement.classList.remove("dark");
+      } else {
+        localStorage.setItem("prefers_color_scheme_set", "dark");
+        document.documentElement.classList.add("dark");
+      }
+      updateTheme();
+    });
+
+    if (
+      localStorage.prefers_color_scheme_set === "dark" ||
+      (!("prefers_color_scheme_set" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    updateTheme();
+  });
+</script>-->
+<script defer>
+  const body = document.querySelector('body');
+  const themeSwitch = document.getElementById('theme-switch');
+  const themeIcon = document.querySelector('.icon-placeholder');
+  const darkTheme = 'dark-theme';
+  const lightTheme = '';
+  const themeName = 'astro-theme';
+  const themePreference = window.localStorage.getItem(themeName);
+
+  if (themePreference) {
+    const preference = JSON.parse(themePreference);
+    body.className = preference.class;
+    themeIcon.textContent = preference.icon;
+    themeSwitch.checked = preference.class === darkTheme;
+  }
+
+  themeSwitch.addEventListener('change', (e) => {
+    if (e.target.checked) {
+      body.className = darkTheme;
+      themeIcon.textContent = '🌙';
+      window.localStorage.setItem(themeName, JSON.stringify({ class: darkTheme, icon: '🌙' }));
+    } else {
+      body.className = lightTheme;
+      themeIcon.textContent = '🌞';
+      window.localStorage.setItem(themeName, JSON.stringify({ class: lightTheme, icon: '🌞' }));
+    }
+  });
+</script>
+
+
