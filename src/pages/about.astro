@@ -50,6 +50,22 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
         conocerme. ¡Espero que podamos embarcarnos juntos en un emocionante viaje
         tecnológico!
       </p>
+      <style>
+        p 
+        {
+          color: #fff; /* Color de texto blanco */
+          font-size: 24px; /* Tamaño de fuente */
+          font-weight: bold; /* Texto en negrita */
+          border: 1px solid #08f; /* Borde azul claro */
+          border-radius: 15px;
+          padding: 10px; /* Espacio interno */
+          background-color: #111; /* Fondo oscuro */
+          text-shadow: 0 0 5px #08f, 0 0 10px #08f, 0 0 15px #08f, 0 0 20px #08f,
+            0 0 25px #08f, 0 0 30px #08f, 0 0 35px #08f; /* Efecto de neón al texto */
+          box-shadow: 0 0 5px #08f, 0 0 10px #08f, 0 0 15px #08f, 0 0 20px #08f,
+            0 0 25px #08f, 0 0 30px #08f, 0 0 35px #08f; /* Efecto de neón al borde */
+        }
+      </style>
     </div>
     <div class="grid md:grid-cols-1 gap-10 mx-auto max-w-3xl mt-12">
       {
@@ -76,6 +92,16 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
                   {teamMemberEntry.data.title}
                 </h3>
               </div>
+              <style>
+                Picture {
+                  border-radius: 15 px;
+                       background-color: #111; /* Fondo oscuro */
+          text-shadow: 0 0 5px #08f, 0 0 10px #08f, 0 0 15px #08f, 0 0 20px #08f,
+            0 0 25px #08f, 0 0 30px #08f, 0 0 35px #08f; /* Efecto de neón al texto */
+          box-shadow: 0 0 5px #08f, 0 0 10px #08f, 0 0 15px #08f, 0 0 20px #08f,
+            0 0 25px #08f, 0 0 30px #08f, 0 0 35px #08f; /* Efecto de neón al borde */
+                }
+              </style>
             </div>
           </div>
         ))
