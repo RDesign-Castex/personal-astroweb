@@ -1,12 +1,12 @@
 ---
 draft: false
-title: "Hackintosh Coffe lake"
+title: "Convertir tu PC en una Mac: La Guía Definitiva para Crear tu Propio Hackintosh"
 snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
 image: {
-    src: "https://i.postimg.cc/5tXqKQcn/DALL-E-2023-10-17-20-20-24-Ilustraci-n-Una-representaci-n-art-stica-de-una-placa-base-con-el-logo.png",
+    src: "https://i.postimg.cc/J4CX203K/HACKINTOSH.png",
     alt: "Hackintosh"
 }
-publishDate: "2023-10-17T20:22:00.000Z"
+publishDate: "2023-09-16T19:08:00.000Z"
 category: "Tutorial"
 author: "René Kuhm"
 tags: ["Aprendizaje", "Computación"]
