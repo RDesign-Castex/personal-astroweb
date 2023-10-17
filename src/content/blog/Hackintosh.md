@@ -73,8 +73,4 @@ config.plist
 
 Una vez instalado macOS, deberás transferir tus archivos EFI desde tu USB a tu disco duro para que puedas arrancar sin la memoria USB.
 
-![Imagen de un Hackintosh Coffee Lake](https://www.example.com/hackintosh_image.jpg)
-
-**Nota**: La URL de la imagen es ficticia y no conducirá a ninguna imagen real. Si deseas agregar una imagen, debes proporcionarla o enlazarla desde una fuente confiable.
-
 **Recordatorio**: Asegúrate de leer la documentación de OpenCore y consultar foros y comunidades relacionadas para solucionar problemas específicos. ¡Buena suerte!
