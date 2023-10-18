@@ -34,7 +34,7 @@ const menuitems = [
         title: "Cursos",
         path: "/blog/Cursos",
       },
-    ]
+    ],
   },
   {
     title: "Contact",
@@ -52,7 +52,7 @@ const menuitems = [
         <span class="text-slate-500 ml-1">Despegue</span>
       </a>
       <div class="lg:hidden">
-        <MenuIcon class="w-4 h-4 " />
+        <MenuIcon class="w-4 h-4" />
       </div>
     </div>
 
@@ -61,7 +61,12 @@ const menuitems = [
         <ul class="flex flex-col lg:flex-row">
           {
             menuitems.map((item, index) => (
-              <>
+              <li>
+                <a
+                  href={item.path}
+                  class="px-2 py-2 text-gray-600 hover:text-gray-900">
+                  {item.title}
+                </a>
                 {item.children && (
                   <Dropdown
                     title={item.title}
@@ -69,16 +74,7 @@ const menuitems = [
                     lastItem={index === menuitems.length - 1}
                   />
                 )}
-                {!item.children && (
-                  <li>
-                    <a
-                      href={item.path}
-                      class="px-2 py-2 text-gray-600 hover:text-gray-900" id="link">
-                      {item.title}
-                    </a>
-                  </li>
-                )}
-              </>
+              </li>
             ))
           }
         </ul>
