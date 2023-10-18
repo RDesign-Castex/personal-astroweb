@@ -1,9 +1,9 @@
 ---
-draft: false
-title: "Convertir tu PC en una Mac: La Guía Definitiva para Crear tu Propio Hackintosh"
+draft: "false"
+title: "Hackintosh Coffee Lake"
 snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
 image: {
-    src: "https://i.postimg.cc/J4CX203K/HACKINTOSH.png",
+    src: "https://i.postimg.cc/5tXqKQcn/DALL-E-2023-10-17-20-20-24-Ilustraci-n-Una-representaci-n-art-stica-de-una-placa-base-con-el-logo.png",
     alt: "Hackintosh"
 }
 publishDate: "2023-09-16T19:08:00.000Z"
