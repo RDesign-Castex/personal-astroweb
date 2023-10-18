@@ -22,18 +22,6 @@ const menuitems = [
     title: "Blog",
     path: "/blog",
     children: [
-      {
-        title: "Noticias",
-        path: "/blog/Noticias",
-      },
-      {
-        title: "Tutorial",
-        path: "/blog/Tutorial",
-      },
-      {
-        title: "Cursos",
-        path: "/blog/Cursos",
-      },
     ],
   },
   {
@@ -68,7 +56,8 @@ const menuitems = [
                     children={item.children}
                     lastItem={index === menuitems.length - 1}
                   />
-                ) : (
+                ) :
+                 (
                   <li>
                     <a
                       href={item.path}
