@@ -61,20 +61,24 @@ const menuitems = [
         <ul class="flex flex-col lg:flex-row">
           {
             menuitems.map((item, index) => (
-              <li>
-                <a
-                  href={item.path}
-                  class="px-2 py-2 text-gray-600 hover:text-gray-900">
-                  {item.title}
-                </a>
-                {item.children && (
+              <>
+                {item.children ? (
                   <Dropdown
                     title={item.title}
                     children={item.children}
                     lastItem={index === menuitems.length - 1}
                   />
+                ) : (
+                  <li>
+                    <a
+                      href={item.path}
+                      class="px-2 py-2 text-gray-600 hover:text-gray-900"
+                      id="link">
+                      {item.title}
+                    </a>
+                  </li>
                 )}
-              </li>
+              </>
             ))
           }
         </ul>
