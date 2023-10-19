@@ -2,15 +2,17 @@
 draft: false
 title: "Gran Actualización de Windows"
 snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
-image: {
+image:
+  {
     src: "https://i.postimg.cc/7ZqNgrMp/windows-4j-Obb-Wz5vf-I-unsplash.jpg",
-    alt: "frontend master"
-}
+    alt: "frontend master",
+  }
 publishDate: "2023-09-25T19:01:00.000Z"
 category: "Noticias"
 author: "René Kuhm"
 tags: ["Aprendizaje", "Computación"]
 ---
+
 La reciente actualización de Windows ha introducido varias novedades destinadas a mejorar la experiencia del usuario:
 
 Administración del Tiempo: Las herramientas renovadas permiten a los usuarios gestionar eficientemente su tiempo al trabajar o jugar en Windows. Se espera que estas herramientas optimicen el rendimiento de tareas diarias y mejoren la organización general del sistema[1].

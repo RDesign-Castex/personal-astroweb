@@ -1,128 +1,135 @@
 /* Estilos base (tema claro) */
 body {
-    background-color: #ffffff;
-    color: #1c1c1c;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #ffffff;
+  color: #1c1c1c;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 a {
-    color: #0077cc;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #0077cc;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
-    color: #0055aa;
+  color: #0055aa;
 }
 
-p, h1, h2, h3 {
-    color: white; 
+p,
+h1,
+h2,
+h3 {
+  color: white;
 }
 
 /* Estilos para el tema oscuro */
 body.dark-theme {
-    background-color: #121212;
-    color: #e0e0e0;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
 body.dark-theme a {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 body.dark-theme a:hover {
-    color: #00a7b3;
+  color: #00a7b3;
 }
 
-body.dark-theme h1, 
-body.dark-theme h2, 
-body.dark-theme h3, 
-body.dark-theme h4, 
-body.dark-theme h5, 
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme h3,
+body.dark-theme h4,
+body.dark-theme h5,
 body.dark-theme h6 {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 body.dark-theme blockquote {
-    border-left-color: #bb86fc;
-    color: #adadad;
+  border-left-color: #bb86fc;
+  color: #adadad;
 }
 
-body.dark-theme code, 
+body.dark-theme code,
 body.dark-theme pre {
-    background-color: #2d2d2d;
-    color: #f8f8f8;
+  background-color: #2d2d2d;
+  color: #f8f8f8;
 }
 
 body.dark-theme hr {
-    border-top-color: #2d2d2d;
+  border-top-color: #2d2d2d;
 }
 
 body.dark-theme table {
-    border-color: #2d2d2d;
+  border-color: #2d2d2d;
 }
 
-body.dark-theme th, 
+body.dark-theme th,
 body.dark-theme td {
-    border-bottom-color: #2d2d2d;
+  border-bottom-color: #2d2d2d;
 }
 
-body.dark-theme input, 
-body.dark-theme textarea, 
-body.dark-theme select, 
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select,
 body.dark-theme button {
-    background-color: #2d2d2d;
-    color: #e0e0e0;
-    border-color: #3d3d3d;
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border-color: #3d3d3d;
 }
 
-body.dark-theme input::placeholder, 
+body.dark-theme input::placeholder,
 body.dark-theme textarea::placeholder {
-    color: #adadad;
+  color: #adadad;
 }
 
-body.dark-theme input:focus, 
-body.dark-theme textarea:focus, 
-body.dark-theme select:focus, 
+body.dark-theme input:focus,
+body.dark-theme textarea:focus,
+body.dark-theme select:focus,
 body.dark-theme button:focus {
-    border-color: #a877e4;
-    box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.5);
+  border-color: #a877e4;
+  box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.5);
 }
 
 /* Estilos base para el botón */
 .theme-toggle-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #d1cdcd;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    padding: 10px 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d1cdcd;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
 }
 
 .theme-toggle-btn:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .theme-toggle-btn:active {
-    transform: scale(0.95);
+  transform: scale(0.95);
 }
 
 .theme-toggle-btn .theme-icon {
-    width: 20px;
-    height: 20px;
-    fill: #333333;
-    transition: fill 0.3s ease;
+  width: 20px;
+  height: 20px;
+  fill: #333333;
+  transition: fill 0.3s ease;
 }
 
 /* Estilos para el botón en tema oscuro */
 body.dark-theme .theme-toggle-btn {
-    background-color: #333333;
+  background-color: #333333;
 }
 
 body.dark-theme .theme-toggle-btn .theme-icon {
-    fill: #ffffff;
+  fill: #ffffff;
 }

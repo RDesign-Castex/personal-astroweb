@@ -9,7 +9,13 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   site: "https://astroship.web3templates.com",
-  integrations: [tailwind(), image({
-    serviceEntryPoint: "@astrojs/image/sharp"
-  }), mdx(), sitemap(), preact()]
+  integrations: [
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    mdx(),
+    sitemap(),
+    preact(),
+  ],
 });

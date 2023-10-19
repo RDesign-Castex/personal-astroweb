@@ -2,10 +2,11 @@
 draft: false
 title: "Hackintosh Coffee Lake"
 snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
-image: {
+image:
+  {
     src: "https://i.postimg.cc/5tXqKQcn/DALL-E-2023-10-17-20-20-24-Ilustraci-n-Una-representaci-n-art-stica-de-una-placa-base-con-el-logo.png",
-    alt: "Hackintosh"
-}
+    alt: "Hackintosh",
+  }
 publishDate: "2023-09-16T19:08:00.000Z"
 category: "Tutorial"
 author: "René Kuhm"
@@ -19,6 +20,7 @@ tags: ["Aprendizaje", "Computación"]
 ## 1. Requisitos:
 
 **Hardware**:
+
 - Procesador Intel Coffee Lake.
 - Una placa madre compatible.
 - Gráficos integrados UHD 630 o una tarjeta gráfica compatible.
@@ -26,6 +28,7 @@ tags: ["Aprendizaje", "Computación"]
 - Un disco duro o SSD de al menos 64 GB.
 
 **Software**:
+
 - Imagen de macOS (puede obtenerse desde la Mac App Store desde una Mac).
 - Una memoria USB de al menos 16 GB.
 - [OpenCore](https://github.com/acidanthera/OpenCorePkg) (un bootloader para Hackintosh).
@@ -36,8 +39,7 @@ tags: ["Aprendizaje", "Computación"]
 1. Descarga macOS desde la Mac App Store.
 2. Formatea tu USB como "Mac OS Extended (Journaled)" y nómbralo "MyVolume".
 3. Ejecuta el siguiente comando en Terminal (reemplazando `CarpetaDeDescarga` por el path donde descargaste macOS):
-sudo /Applications/CarpetaDeDescarga/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
-
+   sudo /Applications/CarpetaDeDescarga/Install\ macOS\ Mojave.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume
 
 ## 3. Configurar OpenCore:
 

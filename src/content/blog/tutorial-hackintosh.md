@@ -2,17 +2,13 @@
 draft: false
 title: "Convertir tu PC en una Mac: La Guía Definitiva para Crear tu Propio Hackintosh"
 snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
-image: {
-    src: "https://i.postimg.cc/J4CX203K/HACKINTOSH.png",
-    alt: "Hackintosh"
-}
+image:
+  { src: "https://i.postimg.cc/J4CX203K/HACKINTOSH.png", alt: "Hackintosh" }
 publishDate: "2023-09-16T19:08:00.000Z"
 category: "Tutorial"
 author: "René Kuhm"
 tags: ["Aprendizaje", "Computación"]
 ---
-
-
 
 # Cómo Crear un SSDT para tu Hackintosh
 

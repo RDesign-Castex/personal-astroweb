@@ -12,7 +12,7 @@ export interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
 const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
+  "/sitio.png",
   Astro.site
 ).toString();
 
@@ -54,7 +54,7 @@ const makeTitle = title ? title + " | " + "TecnoDespegue" : "TecnoDespegue";
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "TecnoDespegue Homepage Screenshot",
         },
       }}
     />
