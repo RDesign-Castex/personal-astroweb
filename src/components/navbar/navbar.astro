@@ -1,29 +1,37 @@
 ---
 import Container from "@components/container.astro";
 import Dropdown from "./dropdown.astro";
-import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { 
+Astronav,
+MenuItems,
+MenuIcon } from "astro-navbar";
 import DarkLightSwitch from "@components/DarkLightSwitch.astro";
 
 const menuitems = [
   {
     title: "Home",
     path: "/",
+    children: null
   },
   {
     title: "Pricing",
     path: "/pricing",
+    children: null
   },
   {
     title: "About",
     path: "/about",
+    children: null
   },
   {
     title: "Blog",
     path: "/blog",
+    children: null
   },
   {
     title: "Contact",
     path: "/contact",
+    children: null
   },
 ];
 ---
