@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "start": "astro dev --hostname 0.0.0.0",
     "build": "astro build",
     "lint:html": "astro build && htmlhint ./dist/**/*.html",
     "preview": "astro preview",
