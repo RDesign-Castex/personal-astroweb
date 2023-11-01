@@ -2,7 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Sectionhead from "@components/sectionhead.astro";
-import Pricing from "@components/pricing.astro";
+import PricingComponent from "@components/pricing.astro";
 import Watsapp from "@components/watsapp.astro";
 
 const pricing = [
@@ -75,7 +75,7 @@ const pricing = [
     </Sectionhead>
 
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
-      {pricing.map((item) => <Pricing plan={item} />)}
+      {pricing.map((item) => <PricingComponent plan={item} />)}
     </div>
   </Container>
   <Watsapp />
