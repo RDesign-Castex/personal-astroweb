@@ -1,0 +1,18 @@
+---
+import Login from "@components/login.astro";
+import Register from "@components/register.astro";
+---
+
+
+  <div id="auth-container">
+    <button id="toggle-auth" onclick="toggleAuth()">Toggle Auth</button>
+    <div id="login-container">
+      <Login />
+    </div>
+    <div id="register-container" style="display: none;">
+      <Register />
+    </div>
+  </div>
+
+
+<script type="module" src="../utils/toggleAuth.js"></script>

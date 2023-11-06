@@ -6,6 +6,7 @@ Astronav,
 MenuItems,
 MenuIcon } from "astro-navbar";
 import DarkLightSwitch from "@components/DarkLightSwitch.astro";
+import Link from "@components/ui/link.astro";
 
 const menuitems = [
   {
@@ -78,5 +79,11 @@ const menuitems = [
       </MenuItems>
       <DarkLightSwitch />
     </Astronav>
+    <div>
+      <div class="hidden lg:flex items-center gap-4">
+        <a href="/login">Log in</a>
+        <Link href="/signup" size="md">Sign up</Link>
+      </div>
+    </div>
   </header>
 </Container>
