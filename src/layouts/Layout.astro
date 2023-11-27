@@ -4,6 +4,10 @@ import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar/navbar.astro";
 import "@fontsource-variable/inter/index.css";
 
+
+
+
+
 export interface Props {
   title: string;
   scripts?: Array<{ type?: string; nomodule?: boolean; src: string }>;
@@ -61,6 +65,7 @@ const makeTitle = title ? title + " | " + "TecnoDespegue" : "TecnoDespegue";
     />
   </head>
   <body>
+    
     <Navbar />
     <slot />
     <Footer />
@@ -204,6 +209,8 @@ const makeTitle = title ? title + " | " + "TecnoDespegue" : "TecnoDespegue";
       body.dark-theme .theme-toggle-btn .theme-icon {
         fill: #ffffff;
       }
+    
+
     </style>
     <script defer>
     // ... (tu código JS aquí)
