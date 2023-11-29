@@ -1,0 +1,82 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import PricingComponent from "@components/pricing.astro";
+import Watsapp from "@components/watsapp.astro";
+
+const pricing = [
+  {
+    name: "Personal",
+    price: "Consultar",
+    popular: false,
+    features: [
+      "Un sitio web",
+      "Auto administrable",
+      "Páginas cuatro",
+      "Creación con Astro",
+      "Básica Integración",
+      "Soporte ",
+    ],
+    button: {
+      text: "Get Started",
+      link: "/",
+    },
+  },
+  {
+    name: "Startup",
+    price: {
+      monthly: "Consultar",
+      annual: "$16",
+      discount: "10%",
+      original: "$24",
+    },
+    popular: true,
+    features: [
+      "Un sitio web",
+      "Auto administrable",
+      "Páginas cuatro",
+      "Creación con Astro",
+      "Integraciones avanzadas",
+      "Soporte",
+    ],
+    button: {
+      text: "Get Started",
+      link: "#",
+    },
+  },
+  {
+    name: "Enterprise",
+    price: "Consultar",
+    popular: false,
+    features: [
+      "Un sitio web",
+      "Auto administrable",
+      "Cantidad de páginas a elección",
+      "Creación con Astro",
+      "Gerente de cuenta dedicado",
+      "Soporte telefónico 24 horas al día",
+    ],
+    button: {
+      text: "Contact us",
+      link: "/contact",
+    },
+  },
+];
+---
+
+<Layout title="Pricing">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Precios</Fragment>
+      <Fragment slot="desc"
+        >Precios simples y predecibles. No hay sorpresas.</Fragment
+      >
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <PricingComponent plan={item} />)}
+    </div>
+  </Container>
+  <Watsapp />
+</Layout>

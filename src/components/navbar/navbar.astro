@@ -1,0 +1,99 @@
+---
+import Container from "@components/container.astro";
+import Dropdown from "./dropdown.astro";
+import { 
+Astronav,
+MenuItems,
+MenuIcon } from "astro-navbar";
+import DarkLightSwitch from "@components/DarkLightSwitch.astro";
+import Link from "@components/ui/link.astro";
+
+const menuitems = [
+  {
+    title: "Home",
+    path: "/",
+    children: null
+  },
+  {
+    title: "Pricing",
+    path: "/pricing",
+    children: null
+  },
+  {
+    title: "About",
+    path: "/about",
+    children: null
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+    children: null
+  },
+  {
+    title: "Contact",
+    path: "/contact",
+    children: null
+  },
+];
+---
+
+<Container>
+  <header class="flex flex-col lg:flex-row items-center justify-between w-full py-5">
+    <div class="flex items-center justify-between w-full lg:w-auto">
+      <a href="/" class="text-lg flex items-center">
+        <!-- Texto "Tecno" con fondo transparente -->
+        <span class="movingGradient text-transparent bg-clip-text text-3xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">Tecno</span>
+        <!-- Texto "Despegue" con fondo transparente -->
+        <span class="movingGradient text-transparent bg-clip-text text-3xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-red-500">Despegue</span>
+      </a>
+      <div class="lg:hidden">
+        <MenuIcon class="w-4 h-4" />
+      </div>
+    </div>
+
+    <Astronav>
+      <MenuItems class="hidden lg:flex lg:gap-4 mt-4 lg:mt-0">
+        <ul class="flex flex-col lg:flex-row">
+          {
+            menuitems.map((item, index) => (
+              <>
+                {item.children ? (
+                  <Dropdown
+                    title={item.title}
+                    children={item.children}
+                    lastItem={index === menuitems.length - 1}
+                  />
+                ) : (
+                  <li>
+                    <a
+                      href={item.path}
+                      class="px-2 py-2 text-white hover:text-gray-900"
+                      id="link">
+                      {item.title}
+                    </a>
+                  </li>
+                )}
+              </>
+            ))
+          }
+        </ul>
+      </MenuItems>
+      <DarkLightSwitch />
+    </Astronav>
+  </header>
+</Container>
+<style>
+  ackground-size: 200% 200%; animation: movingGradient 3s ease infinite;
+  @keyframes movingGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+</style>

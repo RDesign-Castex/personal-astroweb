@@ -1,0 +1,53 @@
+---
+import { Tick } from "@components/ui/icons";
+import Link from "@components/ui/link.astro";
+
+const { plan } = Astro.props;
+---
+
+<div>
+  <div class="flex flex-col w-full order-first lg:order-none">
+    <div class="bg-gray-400  border-2 border-gray-300 border-opacity-50 p-6 rounded-md hover:shadow-md transition-transform transform hover:-translate-y-1">
+      <div class="text-center">
+        <h4 class="text-lg font-medium text-black">{plan.name}</h4>
+        <p class="mt-3 text-4xl font-bold text-black md:text-4xl">
+          {plan.price && typeof plan.price === "object" ? plan.price.monthly : plan.price}
+        </p>
+      </div>
+      <ul class="grid mt-8 text-left gap-y-4 ">
+        {plan.features.map((item) => (
+          <li class="flex items-start gap-3 text-gray-800">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+      <div class="flex mt-8">
+        <a
+          href={plan.button.link || "#"}
+          class={`block w-full py-2 text-center font-semibold rounded-md ${
+            plan.popular
+              ? "bg-gradient-to-r from-purple-600 to-blue-500 text-white hover:from-purple-700 hover:to-blue-600"
+              : "border-2 border-[#4a6ba7] border-opacity-50 text-gray-100 hover:border-opacity-80 hover:text-gray-600 hover:bg-white"
+          }`}
+        >
+          {plan.button.text || "Get Started"}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+

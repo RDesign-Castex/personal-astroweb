@@ -1,0 +1,251 @@
+---
+import { SEO } from "astro-seo";
+import Footer from "@components/footer.astro";
+import Navbar from "@components/navbar/navbar.astro";
+import "@fontsource-variable/inter/index.css";
+
+
+
+
+
+export interface Props {
+  title: string;
+  scripts?: Array<{ type?: string; nomodule?: boolean; src: string }>;
+}
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const resolvedImageWithDomain = new URL(
+  "/sitio.png",
+  Astro.site
+).toString();
+
+const { title, scripts = [] } = Astro.props;
+
+const makeTitle = title ? title + " | " + "TecnoDespegue" : "TecnoDespegue";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:image" content="https://i.postimg.cc/YSK202Fd/sitio.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+
+    <meta name="generator" content={Astro.generator} />
+
+    <SEO
+      title={makeTitle}
+      description="TecnoDespegue: tu portal de tecnología y avances digitales, llevando a tu negocio al siguiente nivel en el mundo digital."
+      canonical={canonicalURL}
+      twitter={{
+        creator: "@René-Kuhm",
+        site: "@tecnodespegue.com",
+        card: "summary_large_image",
+      }}
+      openGraph={{
+        basic: {
+          url: canonicalURL,
+          type: "website",
+          title: `TecnoDespegue`,
+          image: resolvedImageWithDomain,
+        },
+        image: {
+          alt: "TecnoDespegue Homepage Screenshot",
+        },
+      }}
+    />
+   
+  </head>
+  <body>
+    
+    <Navbar />
+    <slot />
+    <Footer />
+    <style is:global>
+      img {
+        content-visibility: auto;
+      }
+      /* Estilos base (tema claro) */
+      body {
+        background-color: #5D6D7E;
+        color: #1c1c1c;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      a {
+        color: #0077cc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      a:hover {
+        color: #0055aa;
+      }
+
+      p,
+      h1,
+      h2,
+      h3 {
+        color: #1c1c1c;
+      }
+
+      /* Estilos para el tema oscuro */
+      body.dark-theme {
+        background-color: #121212;
+        color: #e0e0e0;
+      }
+
+      body.dark-theme #link {
+        color: #ffffff;
+      }
+
+      body.dark-theme a {
+        color: #1c1c1c;
+      }
+
+      body.dark-theme a:hover {
+        color: #00a7b3;
+      }
+
+      body.dark-theme h1,
+      body.dark-theme h2,
+      body.dark-theme h3,
+      body.dark-theme h4,
+      body.dark-theme h5,
+      body.dark-theme h6,
+      body.dark-theme p {
+        color: #ffffff;
+      }
+
+      body.dark-theme blockquote {
+        border-left-color: #bb86fc;
+        color: #adadad;
+      }
+
+      body.dark-theme code,
+      body.dark-theme pre {
+        background-color: #2d2d2d;
+        color: #f8f8f8;
+      }
+
+      body.dark-theme hr {
+        border-top-color: #2d2d2d;
+      }
+
+      body.dark-theme table {
+        border-color: #2d2d2d;
+      }
+
+      body.dark-theme th,
+      body.dark-theme td {
+        border-bottom-color: #2d2d2d;
+      }
+
+      body.dark-theme input,
+      body.dark-theme textarea,
+      body.dark-theme select,
+      body.dark-theme button {
+        background-color: #2d2d2d;
+        color: #e0e0e0;
+        border-color: #3d3d3d;
+      }
+
+      body.dark-theme input::placeholder,
+      body.dark-theme textarea::placeholder {
+        color: #adadad;
+      }
+
+      body.dark-theme input:focus,
+      body.dark-theme textarea:focus,
+      body.dark-theme select:focus,
+      body.dark-theme button:focus {
+        border-color: #a877e4;
+        box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.5);
+      }
+
+      /* Estilos base para el botón */
+      .theme-toggle-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #d1cdcd;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        padding: 10px 20px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        outline: none;
+      }
+
+      .theme-toggle-btn:hover {
+        transform: scale(1.05);
+      }
+
+      .theme-toggle-btn:active {
+        transform: scale(0.95);
+      }
+
+      .theme-toggle-btn .theme-icon {
+        width: 20px;
+        height: 20px;
+        fill: #333333;
+        transition: fill 0.3s ease;
+      }
+
+      /* Estilos para el botón en tema oscuro */
+      body.dark-theme .theme-toggle-btn {
+        background-color: #333333;
+      }
+
+      body.dark-theme .theme-toggle-btn .theme-icon {
+        fill: #ffffff;
+      }
+    
+
+    </style>
+    <script defer>
+    // ... (tu código JS aquí)
+    const body = document.querySelector("body");
+    const themeSwitch = document.getElementById("theme-switch");
+    const themeIcon = document.getElementById("theme-icon");
+    const darkIcon = "brightness-3";
+    const darkTheme = "dark-theme";
+    const lightIcon = "wb-sunny";
+    const lightTheme = "light-theme";
+    const themeName = "astro-theme";
+    const themePreference = window.localStorage.getItem(themeName);
+
+    if (themePreference) {
+      const preference = JSON.parse(themePreference);
+      body.className = preference.class;
+      themeIcon.icon = preference.icon;
+      themeSwitch.checked = preference.icon === lightIcon;
+    }
+
+    themeSwitch.addEventListener("click", (e) => {
+      if (!e.target.checked) {
+        const preference = { class: lightTheme, icon: lightIcon };
+        window.localStorage.setItem(themeName, JSON.stringify(preference));
+        body.className = lightTheme;
+        themeIcon.icon = lightIcon;
+        return;
+      }
+      const preference = { class: darkTheme, icon: darkIcon };
+      window.localStorage.setItem(themeName, JSON.stringify(preference));
+      body.className = darkTheme;
+      themeIcon.icon = darkIcon;
+    });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+
+<label for="theme-switch" class="cursor-pointer">
+  <input type="checkbox" id="theme-switch" class="hidden">
+  <span id="theme-icon" class="icon-placeholder"></span>
+</label>
+<style is:global>
+  .icon-placeholder:before {
+    content: '🌞'; /* Icono por defecto (sol) */
+    font-size: 24px;
+  }
+  body.dark-theme .icon-placeholder:before {
+    content: '🌙'; /* Icono para el tema oscuro (luna) */
+  }
+</style>
+
+<script defer>
+  const body = document.querySelector('body');
+  const themeSwitch = document.getElementById('theme-switch');
+  const themeIcon = document.querySelector('.icon-placeholder');
+  const darkTheme = 'dark-theme';
+  const lightTheme = '';
+  const themeName = 'astro-theme';
+  const themePreference = window.localStorage.getItem(themeName);
+
+  if (themePreference) {
+    const preference = JSON.parse(themePreference);
+    body.className = preference.class;
+    themeIcon.textContent = preference.icon;
+    themeSwitch.checked = preference.class === darkTheme;
+  }
+
+  themeSwitch.addEventListener('change', (e) => {
+    if (e.target.checked) {
+      body.className = darkTheme;
+      themeIcon.textContent = '🌙';
+      window.localStorage.setItem(themeName, JSON.stringify({ class: darkTheme, icon: '🌙' }));
+    } else {
+      body.className = lightTheme;
+      themeIcon.textContent = '🌞';
+      window.localStorage.setItem(themeName, JSON.stringify({ class: lightTheme, icon: '🌞' }));
+    }
+  });
+</script>
+
+

@@ -1,0 +1,42 @@
+---
+import { Picture } from "@astrojs/image/components";
+import heroImage from "assets/19198999.png";
+import Link from "@components/ui/link.astro";
+// import { Icon } from "astro-icon";
+---
+
+<main class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={heroImage}
+      alt="Astronaut in the air"
+      widths={[200, 400, 600]}
+      aspectRatio="4:3"
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <h1
+      class="color-changing-text text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Creamos tu sitio web a medida
+    </h1>
+    <p class="text-lg mt-4 text-slate-900 max-w-xl">
+      Bienvenido a nuestro mundo, donde el código y la creatividad se unen para dar vida a experiencias digitales asombrosas. En nuestra página de desarrollo web, te sumergirás en el fascinante universo de la creación de sitios y aplicaciones web.<wbr /> 
+    </p>
+  </div>
+</main>
+<style>
+@keyframes colorChange {
+    0% { color: #ff4500; }
+    25% { color: #240fe1; }
+    50% { color: #00ff00; }
+    75% { color: #ffff00; }
+    100% { color: #ff4500; }
+}
+
+.color-changing-text {
+    animation: colorChange 10s infinite; /* La animación durará 10 segundos y se repetirá indefinidamente */
+}
+</style>

@@ -1,0 +1,47 @@
+---
+import { Icon } from "astro-icon";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Button from "@components/ui/button.astro";
+import Contactform from "@components/contactform.astro";
+import Watsapp from "@components/watsapp.astro";
+---
+
+<Layout title="Contact">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Contact</Fragment>
+      <Fragment slot="desc">aquí estoy para ayudarte.</Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-gray-800">Contact <span class="font-bold text-slate-800">Tecno</span><span
+          class="text-slate-500">Despegue</span</h2>
+        <p class="text-lg leading-relaxed text-slate-500 mt-3">
+          ¿Tienes algo que decir? Estamos aquí para ayudarte. Rellene el formulario o envíe un correo electrónico o llame al teléfono.
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+            <span>Calle 11 bis, Plan 5000 , Edo castex La Pampa</span>
+          </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+            <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
+              href="mailto:hello@astroshipstarter.com"
+              >rdesigncastex@gmail.com</a
+            >
+          </div><div class="flex items-center mt-2 space-x-2  text-slate-500">
+            <Icon class="text-slate-100 w-4 h-4" name="uil:phone" /><a
+              href="tel:+54 (2334) 423707">+54 (2334) 423707</a
+            >
+          </div>
+        </div>
+      </div>
+      <div>
+        <Contactform />
+      </div>
+    </div>
+  </Container>
+  <Watsapp />
+</Layout>
