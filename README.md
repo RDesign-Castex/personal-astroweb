@@ -45,3 +45,5 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 Gracias por visitar TecnoDespegue. ¡Esperamos que encuentres recursos valiosos en nuestro sitio web y te unas a nuestra comunidad! Si tienes alguna pregunta o comentario, no dudes en contactarnos.
 
 [Visita TecnoDespegue](https://tecnodespegue.com)
+
+## Gracias por visitarnos
