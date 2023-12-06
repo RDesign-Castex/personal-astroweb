@@ -22,4 +22,4 @@
 - npm i  "para instalar todas las dependencias"
 - npm run dev "para ejecutar el proyecto"
 
-<img src="https://imgur.com/iSOQku3">
+<img src="https://i.imgur.com/iSOQku3.png">
