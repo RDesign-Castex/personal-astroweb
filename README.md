@@ -17,9 +17,9 @@
 
 ## Descarga el proyecto
 
-- 🫱 Github 🫲 git clone https://github.com/RDesign-Castex/porfolio-nextjs14.git
+- 🫱 Github 🫲 git clone https://github.com/RDesign-Castex/personal-astroweb.git
 - ⭐ Abre el proyecto ⭐
-- npm i  "para instalar todas las dependencias"
-- npm run dev "para ejecutar el proyecto"
+- pnpm i  "para instalar todas las dependencias"
+- pnpm run dev "para ejecutar el proyecto"
 
 <img src="https://i.imgur.com/iSOQku3.png">
